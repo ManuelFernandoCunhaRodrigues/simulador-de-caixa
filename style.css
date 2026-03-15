@@ -1,0 +1,158 @@
+/* Reset básico para remover espaçamentos padrão do navegador */
+* {
+    margin: 0; /* Remove margem padrão */
+    padding: 0; /* Remove espaçamento interno padrão */
+    box-sizing: border-box; /* Faz largura e altura incluírem padding e borda */
+    font-family: Arial, Helvetica, sans-serif; /* Define fonte padrão */
+}
+
+/* Estilização do fundo da página */
+body {
+    background: linear-gradient(135deg, #1f4037, #99f2c8); 
+    /* Cria fundo com degradê diagonal */
+
+    display: flex; 
+    /* Ativa Flexbox para organizar o conteúdo */
+
+    justify-content: center; 
+    /* Centraliza horizontalmente */
+
+    align-items: center; 
+    /* Centraliza verticalmente */
+
+    height: 100vh; 
+    /* Faz o body ocupar 100% da altura da tela */
+}
+
+/* Container principal */
+main {
+    background: white; /* Fundo branco */
+    width: 900px; /* Largura fixa */
+    padding: 30px; /* Espaçamento interno */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); 
+    /* Sombra para dar efeito de profundidade */
+
+    display: flex; 
+    /* Coloca as divs internas lado a lado */
+
+    gap: 30px; 
+    /* Espaço entre as colunas */
+}
+
+/* Área da lista de produtos */
+.div_produto_e_valor {
+    flex: 1; 
+    /* Faz essa div ocupar metade do espaço */
+
+    display: flex; 
+    /* Ativa Flexbox */
+
+    flex-direction: column; 
+    /* Organiza os elementos em coluna */
+
+    gap: 15px; 
+    /* Espaço entre os elementos */
+}
+
+/* Lista (select) */
+#produto_e_valor {
+    height: 250px; /* Altura fixa */
+    border-radius: 10px; /* Bordas arredondadas */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    padding: 10px; /* Espaço interno */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+/* Texto do total */
+.div_produto_e_valor p {
+    font-size: 20px; /* Texto maior */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Valor do total destacado */
+.valor_total {
+    color: #1f4037; /* Cor verde escuro */
+}
+
+/* Botão Total */
+.total {
+    padding: 12px; /* Espaçamento interno */
+    border: none; /* Remove borda padrão */
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #1f4037; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para mãozinha */
+    transition: 0.3s; /* Animação suave ao mudar estado */
+}
+
+/* Efeito ao passar o mouse */
+.total:hover {
+    background-color: #16332c; /* Cor mais escura no hover */
+}
+
+/* Área de cadastro */
+.cadastro_de_produto {
+    flex: 1; /* Ocupa metade do espaço */
+    display: flex; /* Ativa Flexbox */
+    flex-direction: column; /* Organiza em coluna */
+    gap: 15px; /* Espaçamento entre elementos */
+}
+
+/* Inputs */
+.cadastro_de_produto input {
+    padding: 12px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    border: 1px solid #ccc; /* Borda cinza */
+    font-size: 14px; /* Tamanho da fonte */
+    transition: 0.2s; /* Animação suave */
+}
+
+/* Quando o input está selecionado */
+.cadastro_de_produto input:focus {
+    border-color: #1f4037; 
+    /* Muda cor da borda ao clicar */
+
+    box-shadow: 0 0 5px rgba(31, 64, 55, 0.3); 
+    /* Cria brilho leve */
+
+    outline: none; 
+    /* Remove contorno azul padrão do navegador */
+}
+
+/* Botão adicionar */
+.adicionar {
+    padding: 12px; /* Espaçamento interno */
+    border: none; /* Remove borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #28a745; /* Verde */
+    color: white; /* Texto branco */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de clique */
+    transition: 0.3s; /* Animação suave */
+}
+
+/* Efeito hover botão adicionar */
+.adicionar:hover {
+    background-color: #218838; /* Verde mais escuro */
+}
+.mensagem-erro {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: none;
+}
+
+.erro {
+    background-color: #ffdddd;
+    color: #a00000;
+    border: 1px solid #a00000;
+}
+
+.sucesso {
+    background-color: #ddffdd;
+    color: #006400;
+    border: 1px solid #006400;
+}

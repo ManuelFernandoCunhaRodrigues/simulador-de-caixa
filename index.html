@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Caixa (Versão Iniciante)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <header>
+
+        </header>
+        <div id="div_produto_e_valor" class="div_produto_e_valor">
+            <select name="produto_e_valor" id="produto_e_valor" size="30">
+                
+            </select>
+            <br>
+            <p>Total: R$ <span id="valor_total" class="valor_total"></span></p>
+            <button id="total" class="total" onclick="total()">Total</button>
+        </div>
+        <div id="cadastro_de_produto" class="cadastro_de_produto">
+            <input type="text" id="produto" class="produto" placeholder="Produto">
+            <input type="text" id="valor_do_produto" class="valor_do_produto" placeholder="R$ 0,00">
+            <input type="number" id="quantidade" class="quantidade" placeholder="Qnt." min="1">
+            <button id="adicionar" class="adicionar" onclick="adicionar()">Adicionar</button>
+        </div>
+        <div id="mensagem" class="mensagem-erro"></div>
+    </main>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script>$('#valor_do_produto').mask('000.000.000.000.000,00', {reverse: true});</script>
+    <script src="script.js"></script>
+</body>
+
+</html>
